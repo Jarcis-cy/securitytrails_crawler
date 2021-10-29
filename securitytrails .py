@@ -43,9 +43,9 @@ browser.find_element_by_xpath('//*[@id="login"]').click()
 browser.find_element_by_xpath('//*[@id="email"]').send_keys(email)
 browser.find_element_by_xpath('//*[@id="password"]').send_keys(passwd)
 browser.find_element_by_xpath('//*[@id="__next"]/div[1]/div[3]/main/div/div/form/div[4]/button').click()
-print("登陆成功")
 time.sleep(1) # 保险起见
 WebDriverWait(browser,300).until(EC.presence_of_element_located((By.XPATH,'//*[@id="root"]/div/section/nav/div/div[2]/div/ul/form/div/input')))
+print("登陆成功")
 
 browser.find_element_by_xpath('//*[@id="root"]/div/section/nav/div/div[2]/div/ul/form/div/input').send_keys(args.s)
 browser.find_element_by_xpath('//*[@id="root"]/div/section/nav/div/div[2]/div/ul/form/div/button').click()
@@ -64,6 +64,7 @@ else:
 	nextPageNum = args.wp
 urlList = []
 print("爬取第1页")
+WebDriverWait(browser,300).until(EC.presence_of_element_located((By.XPATH,'//*[@id="__next"]/div[1]/div[2]/main/div[2]/div[2]/div/div/div[2]/table/tbody/tr[1]')))
 urlList.append(getUrl())
 if nextPageNum != 0:
 	for i in range(nextPageNum):
@@ -74,7 +75,7 @@ if nextPageNum != 0:
 	print("爬取完成")
 else:
 	print("爬取完成")
-
+browser.quit()
 f = open(args.r,"w")
 for i in urlList:
 	for j in i:
