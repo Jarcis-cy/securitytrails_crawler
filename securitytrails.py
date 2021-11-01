@@ -1,4 +1,10 @@
-# coding = utf-8
+# coding:utf-8
+'''
+@File   :   securitytrails.py
+@Time   :   2021/9/28
+@Author :   Jarcis
+@Link   :   https://github.com/Jarcis-cy
+'''
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
