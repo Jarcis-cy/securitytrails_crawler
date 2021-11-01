@@ -3,7 +3,7 @@
 @File   :   securitytrails.py
 @Time   :   2021/10/29
 @Author :   Jarcis-cy
-@Link   :   https://github.com/Jarcis-cy
+@Link   :   https://github.com/Jarcis-cy/securitytrails_crawler
 '''
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
