@@ -2,7 +2,7 @@
 '''
 @File   :   securitytrails.py
 @Time   :   2021/10/29
-@Author :   Jarcis
+@Author :   Jarcis-cy
 @Link   :   https://github.com/Jarcis-cy
 '''
 from selenium import webdriver
